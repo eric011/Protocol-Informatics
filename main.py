@@ -61,7 +61,7 @@ def main():
     #
     if format == "pcap":
         try:
-            sequences = input.Pcap(file)
+            sequences = input.Pcap(file, 0)
         except IOError:
             print "FATAL: Error opening '%s'" % file
             sys.exit(-1)
