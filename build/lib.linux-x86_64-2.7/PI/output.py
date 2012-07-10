@@ -107,7 +107,6 @@ class Ansi(Output):
                         print self.default % "x%02x" % byte,
                 print ""
 
-            #import code; code.interact(local=locals())
             print "DT  ",
             for j in range(start, start + remainder):
                 column = []

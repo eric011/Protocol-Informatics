@@ -61,7 +61,7 @@ def main():
     #
     if format == "pcap":
         try:
-            sequences = input.Pcap(file, 0)
+            sequences = input.Pcap(file)
         except IOError:
             print "FATAL: Error opening '%s'" % file
             sys.exit(-1)
@@ -122,6 +122,14 @@ def main():
         alist.append(aligned)
         i += 1
     print ""
+
+    #import code; code.interact(local=locals())
+    for t in range(len(alist)):
+        seqs = alist[t]
+        l = len(seqs[0][1])
+        for i in range(len(seqs)):
+            for k in range(l - len(seqs[i][1])):
+                alist[t][i][1].append(0)
 
     #
     # Display each cluster of aligned sequences
