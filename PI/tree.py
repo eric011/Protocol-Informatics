@@ -79,8 +79,8 @@ class Tree:
         self.graph.add_subgraph(self.subgraph)
 
         #if format == "raw":
-        self.graph.write_raw(output + ".dot", prog="dot")
-        self.graph.write_png(output + ".png", prog="dot")
+        #self.graph.write_raw(output + ".dot", prog="dot")
+        #self.graph.write_png(output + ".png", prog="dot")
         #elif format == "png":
         #    self.graph.write_png(output + ".png", prog="dot")
         #else:
